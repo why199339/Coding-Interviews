@@ -25,12 +25,13 @@ public class ReplaceBlank {
 	}
 
 	public static void replaceBlank(char[] s, int length) {
-		if(s == null || length == 0) {
+		if(s == null || length <= 0) {
 			return;
 		}
-		int originalLength = 13;
+		int originalLength = 0;
 		int numberofBlank = 0;
 		for(char c :s) {
+			originalLength ++;
 			if(c == ' ') {
 				numberofBlank ++;
 			} 

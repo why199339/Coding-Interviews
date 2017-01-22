@@ -8,7 +8,7 @@ public class Min {
 	}
 
 	public static int min(int[] numbers) throws Exception {
-		if(numbers == null || numbers.length == 0) {
+		if(numbers == null || numbers.length <= 0) {
 			throw new Exception();
 		}
 		int low = 0;

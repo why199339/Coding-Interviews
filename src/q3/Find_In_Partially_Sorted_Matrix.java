@@ -13,7 +13,7 @@ public class Find_In_Partially_Sorted_Matrix {
 
 	public static boolean find(int[][] matrix, int rows, int columns, int number) {
 		boolean found = false;
-		if(matrix.length != 0 && rows >0 && columns > 0) {
+		if(matrix != null && matrix.length != 0 && rows >0 && columns > 0) {
 			int row = 0;
 			int column = columns - 1;
 			while(row < rows && column >= 0) {
