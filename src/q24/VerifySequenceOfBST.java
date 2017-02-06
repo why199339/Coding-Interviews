@@ -34,7 +34,7 @@ public class VerifySequenceOfBST {
 		}
 		boolean right = true;
 		if (i < end) {
-			right = verifySequenceOfBST(sequence, start, end - 1);
+			right = verifySequenceOfBST(sequence, start + i, end - 1);
 		}
 		return left && right;
 	}

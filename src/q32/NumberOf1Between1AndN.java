@@ -3,7 +3,7 @@ public class NumberOf1Between1AndN {
 
 	public static void main(String[] args) {
 		System.out.println(numberOf1Between1AndN_bad(12));
-		System.out.println(numberOf1Between1AndN_good(13));
+		System.out.println(numberOf1Between1AndN_good(12));
 	}
 
 	public static int numberOf1Between1AndN_good(int n) {

@@ -13,7 +13,7 @@ public class FindPath {
 		root.left.left.right = new BinaryTreeNode(2);
 		root.right.left = new BinaryTreeNode(13);
 		root.right.right = new BinaryTreeNode(4);
-		root.right.right.right = new BinaryTreeNode(1);
+		root.right.right.right = new BinaryTreeNode(5);
 		findPath(root, 22);
 	}
 

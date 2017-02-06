@@ -2,7 +2,7 @@ package q31;
 
 public class FindGreatestSumOfSubArray {
 
-	private static boolean isValidInput = false;
+	private static boolean isValidInput = true;
 
 	public static void main(String[] args) {
 		int[] data = { 1, -2, 3, 10, -4, 7, 2, -5 };
@@ -11,7 +11,7 @@ public class FindGreatestSumOfSubArray {
 
 	public static int findGreatestSumOfSubArra(int[] data) {
 		if (data == null || data.length == 0) {
-			isValidInput = true;
+			isValidInput = false;
 			return 0;
 		}
 		int maxSum = Integer.MIN_VALUE;

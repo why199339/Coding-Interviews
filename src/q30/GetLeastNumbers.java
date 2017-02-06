@@ -18,6 +18,9 @@ public class GetLeastNumbers {
 	}
 
 	public static void getLeastNumbers_2(int[] nums, int n, int[] result, int k) {
+		if (nums == null || result == null || k > n || n <= 0 || k <= 0) {
+			return;
+		}
 		ArrayList<Integer> list = new ArrayList<>();
 		for (int i = 0; i < n; i++) {
 			if (list.size() != k) {

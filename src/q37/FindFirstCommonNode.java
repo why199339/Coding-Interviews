@@ -24,7 +24,7 @@ public class FindFirstCommonNode {
 			result1 = result1.next;
 		}
 		System.out.println();
-		ListNode result2 = findFirstCommonNode_1(head1, node1);
+		ListNode result2 = findFirstCommonNode_2(head1, node1);
 		while(result2 != null) {
 			System.out.print(result2.key + " ");
 			result2 = result2.next;

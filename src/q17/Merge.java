@@ -12,7 +12,7 @@ public class Merge {
 		l1.next.next = new ListNode(4);
 		ListNode p = merge(l1, l2);
 		while (p != null) {
-			System.out.print(p.val + "\t");
+			System.out.print(p.val + " ");
 			p = p.next;
 		}
 	}

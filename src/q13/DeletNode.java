@@ -30,6 +30,7 @@ public class DeletNode {
 			toBeDeleted.next = toBeDeleted.next.next;
 		} else if (toBeDeleted == head) {
 			head = null;
+			toBeDeleted = null;
 		} else {
 			ListNode node = head;
 			while(node.next != toBeDeleted) {
