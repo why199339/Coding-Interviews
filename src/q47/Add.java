@@ -3,17 +3,7 @@ package q47;
 public class Add {
 
 	public static void main(String[] args) {
-		System.out.println(add_1(1, 2));
-		System.out.println(add_2(1, 2));
-	}
-
-	public static int add_1(int num1, int num2) {
-		int result = num1 ^ num2;
-		int carry = (num1 & num2) << 1;
-		while (carry != 0) {
-			add_1(result, carry);
-		}
-		return result;
+		System.out.println(add_2(5, 22));
 	}
 
 	public static int add_2(int num1, int num2) {

@@ -27,7 +27,7 @@ public class IsContinuous {
 			if(numbers[big] == numbers[small]) {
 				return false;
 			}
-			countBlank += numbers[big] = numbers[small] - 1;
+			countBlank += numbers[big] - numbers[small] - 1;
 			small = big;
 			big++;
 		}

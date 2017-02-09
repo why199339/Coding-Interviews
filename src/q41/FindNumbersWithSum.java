@@ -3,7 +3,7 @@ package q41;
 public class FindNumbersWithSum {
 
 	public static void main(String[] args) {
-		int[] data = {1, 2, 5, 7, 11, 15};
+		int[] data = {1, 2, 4, 7, 11, 15};
 		System.out.println(findNumbersWithSum(data, 15));
 	}
 
@@ -16,6 +16,7 @@ public class FindNumbersWithSum {
 		int end = data.length - 1;
 		while(start < end) {
 			if((data[start] + data[end]) == sum) {
+				System.out.println(data[start] + " " + data[end]);
 				found = true;
 				return found;
 			}
