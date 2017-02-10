@@ -8,6 +8,39 @@ public class Match {
 		System.out.println(isMatch("aaa", "ab*ac*a"));
 		System.out.println(isMatch("aaa", "aa.a"));
 		System.out.println(isMatch("aaa", "ab*a"));
+		System.out.println("-----------------------");
+		System.out.println(isMatch_2("aaa".toCharArray(), "a.a".toCharArray()));
+		System.out.println(isMatch_2("aaa".toCharArray(), "a.b".toCharArray()));
+		System.out.println(isMatch_2("aaa".toCharArray(), "ab*ac*a".toCharArray()));
+		System.out.println(isMatch_2("aaa".toCharArray(), "aa.a".toCharArray()));
+		System.out.println(isMatch_2("aaa".toCharArray(), "ab*a".toCharArray()));
+	}
+
+	public static boolean isMatch_2(char[] str, char[] pattern) {
+		if (str == null || pattern == null) {
+			return false;
+		}
+		return matchCore(str, pattern, 0, 0);
+	}
+
+	private static boolean matchCore(char[] str, char[] pattern, int p1, int p2) {
+		if (p1 >= str.length && p2 >= pattern.length) {
+			return true;
+		}
+		if (p1 < str.length && p2 >= pattern.length) {
+			return false;
+		}
+		if (p2 < pattern.length - 1 && pattern[p2 + 1] == '*') {
+			if(pattern[p2] == str[p1] || (pattern[p2] == '.' && p1 < str.length)) {
+				return matchCore(str, pattern, p1 + 1, p2 + 2) || matchCore(str, pattern, p1 + 1, p2) || matchCore(str, pattern, p1, p2 + 2);
+			} else {
+				return matchCore(str, pattern, p1, p2 + 2);
+			}
+		}
+		if (str[p1] == pattern[p2] || (pattern[p2] == '.' && p1 < str.length)) {
+			return matchCore(str, pattern, p1 + 1, p2 + 1);
+		}
+		return false;
 	}
 
 	public static boolean isMatch(String s, String p) {
